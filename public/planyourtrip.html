@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JapanTravel Plan Your Trip</title>
+    <meta name="author" content="rcolley@rcolley">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- local styles -->
+    <link rel="stylesheet" type="text/css" href="styles/japanstyles.css">
+    <!-- local scripts -->
+    <script src="scripts/makedate.js"></script>
+    <script src="scripts/search.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="row rowspacer">
+            <div class="col-sm-12">
+                <header>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="index.html">TravelJapan</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="aboutus.html">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contactus">Contact us</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="planyourtrip.html">Plan your trip</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="refinesearch.html">Refine search</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onsubmit="myserch()">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <!-- content -->
+        <main>
+            <h1 class="text-center">JapanTravel Tours</h1>
+
+            <!-- Tokyo -->
+            <div class="row rowspacer bord">
+
+                <div class="col-sm-4">
+                    <img src="images/scramblesquare.JPG" class="img-fluid" alt="Shibuya Scramble">
+                </div>
+                <div class="col-sm-8">
+                    <h2>Tokyo</h2>
+                    <p>Experience 14 days in Tokyo and surrounds.</p>
+                    <ul>
+                        <li>Shibuya</li>
+                        <li>Harajuku</li>
+                        <li>Akihabara</li>
+                        <li>Shinjuku</li>
+                        <li>Omotesando</li>
+                    </ul>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <tr>
+                                <th>Price AUD</th>
+                                <th>Duration</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>$4000.00</td>
+                                <td>14 days</td>
+                                <!-- Query string -->
+                                <td><a href="contactus.html?tour=Tokyo">Inquire now</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Kyoto -->
+            <div class="row rowspacer  bord">
+                <div class="col-sm-4">
+                    <img src="images/kyotosquare.jpg" class="img-fluid" alt="Kyoto Temple">
+                </div>
+                <div class="col-sm-8">
+                    <h2>Kyoto</h2>
+                    <p>Experience 6 days in Kyoto and surrounds</p>
+                    <ul>
+                        <li>Higashiyama</li>
+                        <li>Arashiyama</li>
+                        <li>Kibune</li>
+                    </ul>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <tr>
+                                <th>Price AUD</th>
+                                <th>Duration</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>$1999.00</td>
+                                <td>6 days</td>
+                                <!-- Query string -->
+                                <td><a href="contactus.html?tour=Kyoto">Inquire now</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Osaka -->
+            <div class="row rowspacer bord">
+                <div class="col-sm-4">
+                    <img src="images/osakasquare.jpg" class="img-fluid" alt="Glico Man Sign">
+                </div>
+                <div class="col-sm-8">
+                    <h2>Osaka</h2>
+                    <p>Experience 10 days in Osaka and surrounds.</p>
+                    <ul>
+                        <li>Kita</li>
+                        <li>Umeda</li>
+                        <li>Minami</li>
+                        <li>Shin-Osaka</li>
+                        <li>Tennoji</li>
+                    </ul>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <tr>
+                                <th>Price AUD</th>
+                                <th>Duration</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>$2999.00</td>
+                                <td>10 days</td>
+                                <!-- Query string -->
+                                <td><a href="contactus.html?tour=Osaka">Inquire now</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Nagasaki -->
+            <div class="row rowspacer bord">
+                <div class="col-sm-4">
+                    <img src="images/nagasquare.jpg" class="img-fluid" alt="Nagasaki Harbour at night">
+                </div>
+                <div class="col-sm-8">
+                    <h2>Nagasaki</h2>
+                    <p>Experience 13 days in Nagasaki and surrounds.</p>
+                    <ul>
+                        <li>Fukushima</li>
+                        <li>Shimoagata</li>
+                        <li>Iki</li>
+                        <li>Katsumoto</li>
+                    </ul>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <tr>
+                                <th>Price AUD</th>
+                                <th>Duration</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>$3870.00</td>
+                                <td>13 days</td>
+                                <!-- Query string -->
+                                <td><a href="contactus.html?tour=Nagasaki">Inquire now</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer>
+            <div class="row rowspacer">
+                <div class="col-sm-12">
+                    &copy;TravelJapan <span id="copyrightyear">year</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

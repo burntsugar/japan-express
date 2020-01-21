@@ -1,0 +1,32 @@
+        .row {
+            margin-top: 10px;
+        }
+
+        .rowspacer {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            margin-top: 10px;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        blockquote {
+            margin: 30px;
+        }
+
+        #mymap {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .bord {
+            border: 1px;
+            border-style: solid;
+            border-color: gainsboro;
+            border-radius: 5px;
+        }
