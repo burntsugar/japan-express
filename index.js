@@ -11,15 +11,20 @@ import mustache from 'mustache-express';
 
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
-app.set('views', __dirname + '/templates');
+// app.set('views', __dirname + '/templates');
+app.set('views', __dirname + '/views');
+
 
 const PORT = process.env.PORT || 3000;
 
 import{UtilsCommonRach} from './utils/utils-common-rach.js'
-import{GoogleMapController} from './controllers/gmapController.js';
+// import{GoogleMapController} from './controllers/gmapController.js';
+
+import {constactUsRouter} from './routes/contactus-routes.js';
+app.use('/contactus', constactUsRouter);
 
 /**
- * route
+ * Default route
  */
 app.get('/', (req,res) => {
     console.log('/');
@@ -29,12 +34,12 @@ app.get('/', (req,res) => {
  * route
  * TODO: Template controller
  */
-app.get('/contactus', (req, res) => {
-    console.log('/contactus');
+// app.get('/contactus', (req, res) => {
+//     console.log('/contactus');
 
-    const gmapurl = GoogleMapController.makeTemplateFragment('gmapurl');
-    res.render('contactus', gmapurl);  
-});
+//     const gmapurl = GoogleMapController.makeTemplateFragment('gmapurl');
+//     res.render('contactus', gmapurl);  
+// });
 
 /**
  * route

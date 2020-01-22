@@ -1,7 +1,7 @@
 /**
  * RMP
  */
-const GoogleMapController = (() => {
+const gmapsUrlHelper = (() => {
 
     /**
      * @public
@@ -24,7 +24,6 @@ const GoogleMapController = (() => {
      * @public
      */
     const makeTemplateFragment = (tagName) => {
-        const pro = tagName;
         const url = getUrl();
         const templateFragment = { 
             [tagName]: url,
@@ -39,4 +38,4 @@ const GoogleMapController = (() => {
     }
 })();
 
-export{GoogleMapController};
+export{gmapsUrlHelper};

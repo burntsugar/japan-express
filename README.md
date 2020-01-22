@@ -10,6 +10,9 @@ Conversions in progress...
 
 * to ES6
 * to template engine ([mustache-express](https://github.com/bryanburgers/node-mustache-express#readme))
+* partials
+* isolate dependencies
+* test
 
 
 ## Dependencies
