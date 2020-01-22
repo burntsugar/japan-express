@@ -11,56 +11,23 @@ import mustache from 'mustache-express';
 
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
-// app.set('views', __dirname + '/templates');
 app.set('views', __dirname + '/views');
-
 
 const PORT = process.env.PORT || 3000;
 
-import{UtilsCommonRach} from './utils/utils-common-rach.js'
-// import{GoogleMapController} from './controllers/gmapController.js';
-
+// contactus route
 import {constactUsRouter} from './routes/contactus-routes.js';
 app.use('/contactus', constactUsRouter);
+
+// templatetest route
+import {templateRouter} from './routes/template-routes.js';
+app.use('/templatetest', templateRouter);
 
 /**
  * Default route
  */
 app.get('/', (req,res) => {
     console.log('/');
-})
-
-/**
- * route
- * TODO: Template controller
- */
-// app.get('/contactus', (req, res) => {
-//     console.log('/contactus');
-
-//     const gmapurl = GoogleMapController.makeTemplateFragment('gmapurl');
-//     res.render('contactus', gmapurl);  
-// });
-
-/**
- * route
- * TODO: Template controller 
- */
-app.get('/templatetest', (req, res) => {
-    console.log('/templatetest');
-
-    const headTitle = "TEST TEMPLATE TITLE";
-    const content = "Some groovy content";
-    const footerCopyrightYear = UtilsCommonRach.makeDate();
-    const searchFormActionEndpoint = '/search';
-
-    const data = {
-        "head-title": headTitle,
-        "content": content,
-        "footer-copyright-year": footerCopyrightYear,
-        "search-form-action-endpoint": searchFormActionEndpoint,
-        };
-
-    res.render('template', data);  
 });
 
 /**
