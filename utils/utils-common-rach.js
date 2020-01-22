@@ -1,25 +1,23 @@
-"use strict";
+'use strict';
 
 /**
  * RMP
  */
 const UtilsCommonRach = (() => {
-
-    /**
+  /**
      * Returns today's year.
      * @public
      * @return {number} today's year.
      */
-    const makeDate = () => {
-        var d = new Date();
-        return d.getFullYear();
-    };
+  const makeDate = () => {
+    const d = new Date();
+    return d.getFullYear();
+  };
 
-    return {
-        makeDate: makeDate,
-    }
-
+  return {
+    makeDate: makeDate,
+  };
 })();
 
-export{UtilsCommonRach};
+export {UtilsCommonRach};
 
