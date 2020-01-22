@@ -1,0 +1,34 @@
+<!-- content -->
+        <main>
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <img src="/images/osaka.jpg" class="img-fluid" alt="Rachael Colley in Osaka.">
+
+                    <img src="/images/kyoto.jpg" class="img-fluid" alt="Rachael Colley in Kyoto.">
+
+                </div>
+                <div class="col-sm-8">
+                    <h1>About JapanTravel</h1>
+
+                    <p>JapanTravel was established in 2010 by Rachael Colley who has lived and travelled through Japan since 2001. Over 700 guests from around the world have accompanied us to cities all over Japan.</p>
+
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">Our tour of Tokyo and Kyoto was so memorable and comfortable. JapanTravel anticipated all of our needs and delighted us with so many surpises!</p>
+                        <footer class="blockquote-footer">Our guests <cite title="Guest testimonial">Sabrina and Christian</cite></footer>
+                    </blockquote>
+
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">I joined a tour of Nagasaki and found myself in the company of a lovely group and an experienced guide. We enjoyed the hidden alley izakayas as well as all the sights. </p>
+                        <footer class="blockquote-footer">Our guest <cite title="Guest testimonial">Cathy</cite></footer>
+                    </blockquote>
+
+                    <p>JapanTravel has a network of experienced guides who have lived, worked and travelled in Japan.</p>
+
+                    <p>Our city tours are family friendly and offer the best sights and food in Japan.</p>
+
+                    <p>We look forward to your company!</p>
+                </div>
+            </div>
+
+        </main>

@@ -1,0 +1,133 @@
+<!-- content -->
+        <main>
+            <!-- form -->
+            <form id="form1" method="get" action="{{contact-form-action-endpoint}}">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <h1 class="text-center">Contact us</h1>
+                        <!-- alert -->
+                        <div class="alert alert-success alert-dismissible fade" role="alert" id="buttonAlert">
+                            <span id="selectedqcity"><strong>Tokyo!</strong></span> You can change this by using the selection below.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="false">&times;</span>
+                            </button>
+                        </div>
+                        <p class="text-center">Please fill out your details and then click the submit button.</p>
+                    </div>
+                </div>
+                <!-- first name -->
+                <div class="form-row">
+                    <div class="col-sm-3">
+                        <label for="fname">*First name</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="fname" id="fname" maxlength="256" required>
+                    </div>
+                </div>
+                <!-- last name -->
+                <div class="form-row">
+                    <div class="col-sm-3">
+                        <label for="lname">*Last name</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="lname" id="lname" maxlength="256" required>
+                    </div>
+                </div>
+                <!-- email -->
+                <div class="form-row">
+                    <div class="col-sm-3">
+                        <label for="email">*Email address</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+                </div>
+                <!-- phone -->
+                <div class="form-row">
+                    <div class="col-sm-3">
+                        <label for="phone">*Phone</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" maxlength="10" name="phone" id="phone" required>
+                    </div>
+                </div>
+                <!-- package -->
+                <div class="form-row">
+                    <div class="col-sm-3">
+                        <label for="packageselect">*Package</label>
+                    </div>
+                    <div class="col-sm-9">
+                        <select class="select col-sm-12 form-control" id="packageselect" name="packageselect" size="1" required>
+                            <option value="">select...</option>
+                            <option value="Tokyo">Tokyo</option>
+                            <option value="Kyoto">Kyoto</option>
+                            <option value="Osaka">Osaka</option>
+                            <option value="Nagasaki">Nagasaki</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- question -->
+                <div class="form-row">
+                    <div class="col-sm-3">
+                        <label for="question">*Your question </label>
+                    </div>
+                    <div class="col-sm-9">
+                        <textarea rows="10" class="form-control" name="question" id="question" maxlength="256" required></textarea>
+                    </div>
+                </div>
+
+                <!-- submit -->
+                <div class="form-row">
+                    <div class="col-sm-12 text-right">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+
+            </form>
+            <!-- visit us -->
+            <div class="row rowspacer">
+
+                <div class="col-sm-12">
+                    <h1>Visit us</h1> Street address <address><span class="font-weight-bold">29 Fortune Lane, Melbourne 3000</span></address>
+                    <!-- Google map -->
+                    <div id="mymap" style="width:400px;height:400px">JapanTravel map</div>
+
+                    Phone <span class="font-weight-bold"><a href="tel:+61399995555">+61 03 99995555</a></span>
+                    <br> Email <span class="font-weight-bold"><a href="mailto:tours@japantravel.com.au">tours@japantravel.com.au</a></span>
+                    <br>
+                </div>
+                <div class="col-sm-10">
+                    <h3 class="rowspacer">Hours of operation</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>Tuesday</td>
+                                    <td>Wednesday</td>
+                                    <td>Thursday</td>
+                                    <td>Friday</td>
+                                    <td>Saturday</td>
+                                    <td>Sunday</td>
+                                </tr>
+                                <tr>
+                                    <td>9:00AM - 5:30PM</td>
+                                    <td>9:00AM - 5:30PM</td>
+                                    <td>9:00AM - 5:30PM</td>
+                                    <td>9:00AM - 5:30PM</td>
+                                    <td>9:00AM - 5:30PM</td>
+                                    <td>9:00AM - 5:30PM</td>
+                                    <td>9:00AM - 5:30PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <!-- Local map script -->
+    <script src="/scripts/homemap.js"></script>
+    <!-- Google maps -->
+    <script id='gscript' src={{gmapurl}}></script>

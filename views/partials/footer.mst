@@ -1,0 +1,14 @@
+<!-- start footer -->
+        <footer>
+            <div class="row rowspacer">
+                <div class="col-sm-12">
+                    &copy;TravelJapan {{footer-copyright-year}}
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<!-- footer template -->
+
+</html>
