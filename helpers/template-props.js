@@ -15,10 +15,16 @@ const templateProps = (() => {
     FOOTER_COPYRIGHT_YEAR: 'footer-copyright-year',
   };
 
+  const endpoints = {
+    CONTACTUS_RESPONSE_ENDPOINT: '/pages/contactus-response',
+    SEARCH_ENDPOINT: '/not-implemented',
+  };
+
   return {
     tagHeaderNames: tagHeaderNames,
     tagBodyNames: tagBodyNames,
     tagFooterNames: tagFooterNames,
+    endpoints: endpoints,
   };
 })();
 
