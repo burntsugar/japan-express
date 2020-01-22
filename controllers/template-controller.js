@@ -19,10 +19,9 @@ const templateController = (() => {
      */
   const makeTemplateFragmentForContactUs = () => {
     const content = gmapsUrlHelper.getUrl;
-    const formEndPoint = '/contact-form';
-    const gmapsFrag = templateHelper.makeTemplateFragment('Contact us');
+    const gmapsFrag = templateHelper.makeTemplateFragment('CONTACT US');
     gmapsFrag[templateProps.tagBodyNames.GMAPS_SCRIPT_SOURCE] = content;
-    gmapsFrag[templateProps.tagBodyNames.CONTACT_FORM_ACTION_ENDPOINT]= formEndPoint;
+    gmapsFrag[templateProps.tagBodyNames.CONTACT_FORM_ACTION_ENDPOINT]= templateProps.endpoints.CONTACTUS_RESPONSE_ENDPOINT;
     return gmapsFrag;
   };
 

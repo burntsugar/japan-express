@@ -1,0 +1,72 @@
+ <!-- content -->
+        <main>
+
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <h1 class="text-center">Thanks for contacting us!</h1>
+
+                    <p class="text-center">Here's your query:</p>
+                </div>
+            </div>
+            <!-- first name -->
+            <div class="form-row">
+                <div class="col-sm-3">
+                    First name
+                </div>
+                <div class="col-sm-9">
+                    <span id="fname"></span>
+                </div>
+            </div>
+            <!-- last name -->
+            <div class="form-row">
+                <div class="col-sm-3">
+                    Last name
+                </div>
+                <div class="col-sm-9">
+                    <span id="lname"></span>
+                </div>
+            </div>
+            <!-- email -->
+            <div class="form-row">
+                <div class="col-sm-3">
+                    Email address
+                </div>
+                <div class="col-sm-9">
+                    <span id="email"></span>
+                </div>
+            </div>
+            <!-- phone -->
+            <div class="form-row">
+                <div class="col-sm-3">
+                    Phone
+                </div>
+                <div class="col-sm-9">
+                    <span id="phone"></span>
+                </div>
+            </div>
+            <!-- package -->
+            <div class="form-row">
+                <div class="col-sm-3">
+                    Package
+                </div>
+                <div class="col-sm-9">
+                    <span id="packageselect"></span>
+                </div>
+            </div>
+            <!-- question -->
+            <div class="form-row">
+                <div class="col-sm-3">
+                    Your question
+                </div>
+                <div class="col-sm-9">
+                    <span id="question"></span>
+                </div>
+            </div>
+
+            <!-- home -->
+            <div class="form-row">
+                <a href="index.html">Home</a>
+            </div>
+
+        </main>
