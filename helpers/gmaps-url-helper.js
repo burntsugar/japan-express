@@ -14,7 +14,7 @@ const gmapsUrlHelper = (() => {
     /**
      * @public
      */
-    const getUrl= () => {
+    const getUrl = () => {
         const key = getAPIKey();
         const url = `https://maps.googleapis.com/maps/api/js?key=${key}&callback=myMap`;
         return url;
