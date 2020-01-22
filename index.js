@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
-    extended: true
+  extended: true,
 }));
 app.use(bodyParser.json());
 import mustache from 'mustache-express';
@@ -16,8 +16,8 @@ app.set('views', __dirname + '/views');
 import {envKeys} from './keys.js';
 
 // contactus route
-import {constactUsRouter} from './routes/contactus-routes.js';
-app.use('/contactus', constactUsRouter);
+import {contactUsRouter} from './routes/contactus-routes.js';
+app.use('/contactus', contactUsRouter);
 
 // templatetest route
 import {templateRouter} from './routes/template-routes.js';
@@ -26,13 +26,13 @@ app.use('/templatetest', templateRouter);
 /**
  * Default route
  */
-app.get('/', (req,res) => {
-    console.log('/');
+app.get('/', (req, res) => {
+  console.log('/');
 });
 
 /**
  * listen
  */
 app.listen(3000, () => {
-    console.log(`app listening on port ${envKeys.PORT}!`);
+  console.log(`app listening on port ${envKeys.PORT}!`);
 });
