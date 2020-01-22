@@ -20,7 +20,7 @@ See [Google Maps Platform > Web > Maps JavaScript API > Get an API Key](https://
 
 ## Run tests
 
-`./node_modules/mocha/bin/mocha --require esm`
+`./node_modules/mocha/bin/mocha --require esm --exit`
 
 Implementation of ES6 modules in Express requires esm be passed to mocha.
 
