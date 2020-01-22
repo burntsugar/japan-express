@@ -9,7 +9,6 @@ const gmapsUrlHelper = (() => {
      * @return {string} maps.googleapis.com/maps/api/js key
      */
   const getAPIKey = () => {
-    // const apiKey = process.env.GMAPKEY || 'not set';
     const apiKey = envKeys.GMAPSAPIKEY;
     return apiKey;
   };

@@ -1,29 +1,17 @@
 
 import {UtilsCommonRach} from '../utils/utils-common-rach.js';
+import {templateProps} from './template-props.js';
 
 const templateHelper = (() => {
-  const tagNames = {
-    HEAD_TITLE: 'head-title',
-    BODY_CONTENT: 'content',
-    FOOTER_COPYRIGHT_YEAR: 'footer-copyright-year',
-    SEARCH_FORM_ACTION_ENDPOINT: 'search-form-action-endpoint',
-  };
-
   const SEARCH_ENDPOINT = '/search';
 
-  const makeTemplateFragment = (headTitle = 'TEMPLATE TITLE',
-    content = 'CONTENT') => {
-    const tHeadTitle = headTitle;
-    const tContent = content;
+  const makeTemplateFragment = (headerTitle = 'DEFAULT TITLE') => {
+    const tHeadTitle = headerTitle;
     const tFooterCopyrightYear = UtilsCommonRach.makeDate();
     const tSearchFormActionEndpoint = SEARCH_ENDPOINT;
 
     const data = {
-      [tagNames.HEAD_TITLE]: tHeadTitle,
-      [tagNames.BODY_CONTENT]: tContent,
-      [tagNames.FOOTER_COPYRIGHT_YEAR]: tFooterCopyrightYear,
-      [tagNames.SEARCH_FORM_ACTION_ENDPOINT]: tSearchFormActionEndpoint,
-    };
+      [templateProps.tagHeaderNames.HEAD_TITLE]: tHeadTitle, [templateProps.tagHeaderNames.SEARCH_FORM_ACTION_ENDPOINT]: tSearchFormActionEndpoint, [templateProps.tagFooterNames.FOOTER_COPYRIGHT_YEAR]: tFooterCopyrightYear};
 
     return data;
   };

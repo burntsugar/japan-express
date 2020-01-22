@@ -2,32 +2,34 @@ import express from 'express';
 import bodyParser from 'body-parser';
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(__dirname+'/public'));
+
 app.use(bodyParser.urlencoded({
   extended: true,
 }));
 app.use(bodyParser.json());
+
 import mustache from 'mustache-express';
 
-app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 app.set('views', __dirname + '/views');
+app.engine('mustache', mustache(__dirname + '/views' + '/partials', '.mst'));
 
 import {envKeys} from './keys.js';
 
-// contactus route
-import {contactUsRouter} from './routes/contactus-routes.js';
-app.use('/contactus', contactUsRouter);
+import {templateController} from './controllers/template-controller.js';
 
-// templatetest route
+// /pages route
 import {templateRouter} from './routes/template-routes.js';
-app.use('/templatetest', templateRouter);
+app.use('/pages', templateRouter);
 
 /**
- * Default route
+ * /home route
  */
-app.get('/', (req, res) => {
-  console.log('/');
+app.get('/home', (req, res) => {
+  console.log('get /home');
+  const data = templateController.makeTemplateFragment('HOME');
+  res.render('home', data);
 });
 
 /**
@@ -37,6 +39,6 @@ app.listen(3000, () => {
   console.log(`app listening on port ${envKeys.PORT}!`);
 });
 
-export{app};
+export {app};
 
 
