@@ -29,7 +29,8 @@ Conversions in progress...
 * to template engine ([mustache-express](https://github.com/bryanburgers/node-mustache-express#readme))
 * template partials
 * isolate dependencies
-* test
+* [SuperTest](https://github.com/visionmedia/supertest#readme)
+* [Mocha](https://mochajs.org/)
 
 ## Environment
 
