@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JapanTravel Home</title>
+    <meta name="author" content="rcolley@rcolley">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- local styles -->
+    <link rel="stylesheet" type="text/css" href="styles/japanstyles.css">
+    <!-- local scripts -->
+    <script src="scripts/makedate.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div class="row rowspacer">
+            <div class="col-sm-12">
+                <header>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="index.html">TravelJapan</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="aboutus.html">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contactus">Contact us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="planyourtrip.html">Plan your trip</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="refinesearch.html">Refine search</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onsubmit="myserch()">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <!-- Carousel -->
+
+        <div id="homecarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#homecarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#homecarousel" data-slide-to="1"></li>
+                <li data-target="#homecarousel" data-slide-to="2"></li>
+                <li data-target="#homecarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/air.jpg?auto=yes&bg=777&fg=555" alt="Flying to Japan">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Wonderful Japan</h5>
+                        <p>Let us take you there</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/caki.jpg?auto=yes&bg=666&fg=444" alt="Akihabara">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Brilliant day trips</h5>
+                        <p>Experience the excitement with us</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/scramble.jpg?auto=yes&bg=666&fg=444" alt="Shibuya Scramble">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Awesome nightlife</h5>
+                        <p>Be dazzled with us</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/rest.jpg?auto=yes&bg=666&fg=444" alt="Robotoyaki Dining in Tokyo">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Food to write home about</h5>
+                        <p>Join us for dinner</p>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#homecarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#homecarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- content -->
+        <main>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Welcome to JapanTravel. We are your Japan travel experts.</h1>
+
+                    <p>Our tours of popular Japanese cities are led by seasoned visitors and locals. We know where the most surprising Japan treats are hiding as well as the being the finest guides to the biggest attractions.</p>
+
+                    <p>Join one of our city tour groups as a solo or with friends. Our multi-day tours include all accommodation, meals and entry fees.</p>
+
+                    <h2>Voted best tour operator 2018!</h2>
+
+                    <p>Thank you for making us the best tour operator of 2018!</p>
+
+                    <p>Send us an <a href="contactus.html">inquiry!</a></p>
+
+                </div>
+                <div class="col-sm-4">
+                    <h1 lang="ja">日本からのニュース</h1>
+                    <h2 lang="ja" class="japmode">関西空港は台風後の国内線を再開する</h2>
+                    <p lang="ja" class="japmode">関西国際空港の国内線は、今週初めに強力な台風で西日本の玄関口が閉鎖された後、新潟へ出発する3日間で最初の航空便で金曜日に再開した。
+                    </p>
+                    <p lang="ja"><a href="https://japantoday.com/category/national/kansai-airport-resumes-domestic-flights-after-typhoon" target="_blank">続きを読む...</a></p>
+                    <h2 lang="ja">大阪の2日間無料の地下鉄と外国人観光客へのバスパスを提供</h2>
+                    <p lang="ja">
+                        台風によるハブ空港の閉鎖により、大阪市内の観光振興機関が、木曜日に地元の地下鉄とバスを無料で提供し始めた。
+                    </p>
+                    <p lang="ja"><a href="https://japantoday.com/category/national/osaka-offering-free-2-day-subway-and-bus-pass-to-foreign-tourists" target="_blank">続きを読む...</a></p>
+                </div>
+            </div>
+
+        </main>
+        <!-- footer -->
+        <footer>
+            <div class="row rowspacer">
+                <div class="col-sm-12">
+                    <!-- &copy;TravelJapan <span id="copyrightyear">year</span> -->
+                    &copy;TravelJapan <span id=copyrightyear>year</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
