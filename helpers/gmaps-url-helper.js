@@ -1,41 +1,48 @@
+
+import {envKeys} from '../keys.js';
 /**
  * RMP
  */
 const gmapsUrlHelper = (() => {
-
-    /**
+  /**
      * @public
+     * @return {string} maps.googleapis.com/maps/api/js key
      */
-    const getAPIKey = () => {
-        const apiKey = process.env.GMAPKEY || "not set";
-        return apiKey;
-    };
+  const getAPIKey = () => {
+    // const apiKey = process.env.GMAPKEY || 'not set';
+    const apiKey = envKeys.GMAPSAPIKEY;
+    return apiKey;
+  };
 
-    /**
+  /**
      * @public
+     * @return {string} maps.googleapis.com/maps/api/js endpoint
+     * including api key.
      */
-    const getUrl = () => {
-        const key = getAPIKey();
-        const url = `https://maps.googleapis.com/maps/api/js?key=${key}&callback=myMap`;
-        return url;
-    };
+  const getUrl = () => {
+    const key = getAPIKey();
+    const url = `https://maps.googleapis.com/maps/api/js?key=${key}&callback=myMap`;
+    return url;
+  };
 
-    /**
+  /**
      * @public
+     * @param {string} tagName
+     * @return {object} template data.
      */
-    const makeTemplateFragment = (tagName) => {
-        const url = getUrl();
-        const templateFragment = { 
-            [tagName]: url,
-        };
-        return templateFragment;
+  const makeTemplateFragment = (tagName) => {
+    const url = getUrl();
+    const templateFragment = {
+      [tagName]: url,
     };
-    
-    return {
-        getAPIKey: getAPIKey,
-        getUrl: getUrl,
-        makeTemplateFragment: makeTemplateFragment,
-    }
+    return templateFragment;
+  };
+
+  return {
+    getAPIKey: getAPIKey,
+    getUrl: getUrl,
+    makeTemplateFragment: makeTemplateFragment,
+  };
 })();
 
-export{gmapsUrlHelper};
+export {gmapsUrlHelper};

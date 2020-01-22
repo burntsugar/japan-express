@@ -13,7 +13,7 @@ app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 app.set('views', __dirname + '/views');
 
-const PORT = process.env.PORT || 3000;
+import {envKeys} from './keys.js';
 
 // contactus route
 import {constactUsRouter} from './routes/contactus-routes.js';
@@ -34,5 +34,5 @@ app.get('/', (req,res) => {
  * listen
  */
 app.listen(3000, () => {
-    console.log(`app listening on port ${PORT}!`);
+    console.log(`app listening on port ${envKeys.PORT}!`);
 });
