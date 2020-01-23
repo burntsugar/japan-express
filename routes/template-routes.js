@@ -1,7 +1,7 @@
 import express from 'express';
 const templateRouter = express.Router();
-
 import {templateController} from '../controllers/template-controller.js';
+import {templateProps} from '../helpers/template-props.js';
 
 templateRouter.use((req, res, next)=> {
   console.log(req.hostname + req.baseUrl + req.url);
@@ -14,19 +14,33 @@ templateRouter.get('/', (req, res) => {
 });
 
 templateRouter.get('/aboutus', (req, res) => {
-  const data = templateController.makeTemplateFragment('ABOUT US');
-  res.render('about', data);
+  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.ABOUTUS);
+  res.render(templateProps.TEMPLATE_NAMES.ABOUTUS, data);
 });
 
 templateRouter.get('/contactus', (req, res) => {
-  const data = templateController.makeTemplateFragmentForContactUs();
-  res.render('contactus', data);
+  const tourName = req.query.tour;
+  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.CONTACTUS, {tour: tourName});
+  res.render(templateProps.TEMPLATE_NAMES.CONTACTUS, data);
 });
 
 templateRouter.get('/contactus-response', (req, res) => {
-  const data = templateController.makeTemplateFragmentForContactUs();
-  res.render('contactus-response', data);
+  const qs = req.query;
+  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.CONTACTUSRESPONSE, qs);
+  res.render(templateProps.TEMPLATE_NAMES.CONTACTUSRESPONSE, data);
+});
+
+templateRouter.get('/planyourtrip', (req, res) => {
+  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.PLANYOURTRIP);
+  res.render(templateProps.TEMPLATE_NAMES.PLANYOURTRIP, data);
+});
+
+templateRouter.get('/sendtest', (req, res) => {
+  res.redirect('/pages/gettest?name=rach&day=zero');
+});
+
+templateRouter.get('/gettest', (req, res) => {
+  res.status(200).send('Good work sport ~ rach@rach ' + JSON.stringify(req.query));
 });
 
 export {templateRouter};
-
