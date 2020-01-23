@@ -11,11 +11,15 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build:fabdist": "rm -rf dist/ && mkdir dist/ && cp -r controllers dist/ && cp -r helpers dist/ && cp -r public dist/ && cp -r routes dist/ && cp -r test dist/ && cp -r utils dist/ && cp -r views dist/ && cp index.js dist/ && cp keys.js dist/ && cp package.json dist/",
+    "build:fab": "npm run build:fabdist && npm run fab:compile",
+    "fab:compile": "fab-static dist"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fab/static": "^0.1.8",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "mocha": "^7.0.0",
