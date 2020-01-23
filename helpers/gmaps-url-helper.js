@@ -24,23 +24,21 @@ const gmapsUrlHelper = (() => {
     return url;
   };
 
-  /**
-     * @public
-     * @param {string} tagName
-     * @return {object} template data.
-     */
-  const makeTemplateFragment = (tagName) => {
-    const url = getUrl();
-    const templateFragment = {
-      [tagName]: url,
-    };
-    return templateFragment;
-  };
+  // /**
+  //    * @param {string} tagName
+  //    * @return {object} template data.
+  //    */
+  // const makeTemplateFragment = (tagName) => { // remove
+  //   const url = getUrl();
+  //   const templateFragment = {
+  //     [tagName]: url,
+  //   };
+  //   return templateFragment;
+  // };
 
   return {
     getAPIKey: getAPIKey,
     getUrl: getUrl,
-    makeTemplateFragment: makeTemplateFragment,
   };
 })();
 
