@@ -5,7 +5,7 @@ import mustache from 'mustache-express';
 
 import {envKeys} from './keys.js';
 import {pagesController} from './controllers/pages-controller.js';
-import {templateRouter} from './routes/template-routes.js';
+import {pageRoutes} from './routes/page-routes.js';
 
 const app = express();
 app.use(express.static(__dirname+'/public'));
@@ -17,7 +17,7 @@ app.set('view engine', 'mustache');
 app.set('views', __dirname + '/views');
 app.engine('mustache', mustache(__dirname + '/views' + '/partials', '.mst'));
 
-app.use('/pages', templateRouter);
+app.use('/pages', pageRoutes);
 
 app.use((req, res, next)=> {
   console.log(req.hostname + req.baseUrl + req.url);
