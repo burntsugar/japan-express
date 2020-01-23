@@ -1,7 +1,9 @@
 {
     "env": {
         "node": true,
-        "es6": true
+        "es6": true,
+        "jquery": true,
+        "browser": true
     },
     "extends": ["eslint:recommended", "google"],
     "globals": {
