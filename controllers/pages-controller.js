@@ -1,7 +1,7 @@
 
 import {templateHelper} from '../helpers/template-helper.js';
 
-const templateController = (() => {
+const pagesController = (() => {
   /**
    *
    * @param {string} pageName
@@ -17,4 +17,4 @@ const templateController = (() => {
   };
 })();
 
-export {templateController};
+export {pagesController};
