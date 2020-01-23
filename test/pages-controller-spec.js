@@ -1,11 +1,11 @@
-import {app} from '../index.js';
+import {pageRoutes} from '../routes/page-routes.js';
 import Test from 'supertest';
 
 describe('GET /', () => {
   let myapp = null;
 
   beforeEach(() => {
-    myapp = app;
+    myapp = pageRoutes;
   });
 
   it('responds with text/html; charset=UTF-8', (done) => {
