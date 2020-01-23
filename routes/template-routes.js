@@ -1,6 +1,6 @@
 import express from 'express';
 const templateRouter = express.Router();
-import {templateController} from '../controllers/template-controller.js';
+import {pagesController} from '../controllers/pages-controller.js';
 import {templateProps} from '../helpers/template-props.js';
 
 templateRouter.use((req, res, next)=> {
@@ -14,24 +14,24 @@ templateRouter.get('/', (req, res) => {
 });
 
 templateRouter.get('/aboutus', (req, res) => {
-  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.ABOUTUS);
+  const data = pagesController.makeTemplateFragment(templateProps.PAGE_NAMES.ABOUTUS);
   res.render(templateProps.TEMPLATE_NAMES.ABOUTUS, data);
 });
 
 templateRouter.get('/contactus', (req, res) => {
   const tourName = req.query.tour;
-  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.CONTACTUS, {tour: tourName});
+  const data = pagesController.makeTemplateFragment(templateProps.PAGE_NAMES.CONTACTUS, {tour: tourName});
   res.render(templateProps.TEMPLATE_NAMES.CONTACTUS, data);
 });
 
 templateRouter.get('/contactus-response', (req, res) => {
   const qs = req.query;
-  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.CONTACTUSRESPONSE, qs);
+  const data = pagesController.makeTemplateFragment(templateProps.PAGE_NAMES.CONTACTUSRESPONSE, qs);
   res.render(templateProps.TEMPLATE_NAMES.CONTACTUSRESPONSE, data);
 });
 
 templateRouter.get('/planyourtrip', (req, res) => {
-  const data = templateController.makeTemplateFragment(templateProps.PAGE_NAMES.PLANYOURTRIP);
+  const data = pagesController.makeTemplateFragment(templateProps.PAGE_NAMES.PLANYOURTRIP);
   res.render(templateProps.TEMPLATE_NAMES.PLANYOURTRIP, data);
 });
 
