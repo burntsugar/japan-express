@@ -5,10 +5,19 @@ const templateProps = (() => {
     SEARCH_FORM_ACTION_ENDPOINT: 'search-form-action-endpoint',
   };
 
-  const tagBodyNames = {
-    BODY_CONTENT: 'content',
+  const CONTACT_US_FIELDS = {
     GMAPS_SCRIPT_SOURCE: 'gmapurl',
+    CONTACTUS_HIDDEN_TOUR: 'tour',
     CONTACT_FORM_ACTION_ENDPOINT: 'contact-form-action-endpoint',
+  };
+
+  const contactResponseFields = {
+    FNAME: 'fname',
+    LNAME: 'lname',
+    EMAIL: 'email',
+    PHONE: 'phone',
+    PACKAGE_SELECT: 'packageselect',
+    QUESTION: 'question',
   };
 
   const tagFooterNames = {
@@ -20,11 +29,30 @@ const templateProps = (() => {
     SEARCH_ENDPOINT: '/not-implemented',
   };
 
+  const PAGE_NAMES = {
+    HOME: 'Home',
+    CONTACTUS: 'Contact us',
+    CONTACTUSRESPONSE: 'Contact us response',
+    ABOUTUS: 'About us',
+    PLANYOURTRIP: 'Plan your trip',
+  };
+
+  const TEMPLATE_NAMES = {
+    HOME: 'home',
+    CONTACTUS: 'contactus',
+    CONTACTUSRESPONSE: 'contactus-response',
+    ABOUTUS: 'about',
+    PLANYOURTRIP: 'planyourtrip',
+  };
+
   return {
     tagHeaderNames: tagHeaderNames,
-    tagBodyNames: tagBodyNames,
     tagFooterNames: tagFooterNames,
     endpoints: endpoints,
+    CONTACT_US_FIELDS: CONTACT_US_FIELDS,
+    contactResponseFields: contactResponseFields,
+    PAGE_NAMES: PAGE_NAMES,
+    TEMPLATE_NAMES: TEMPLATE_NAMES,
   };
 })();
 
