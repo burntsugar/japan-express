@@ -15,7 +15,7 @@
                     First name
                 </div>
                 <div class="col-sm-9">
-                    <span id="fname"></span>
+                    <span id="fname">{{fname}}</span>
                 </div>
             </div>
             <!-- last name -->
@@ -24,7 +24,7 @@
                     Last name
                 </div>
                 <div class="col-sm-9">
-                    <span id="lname"></span>
+                    <span id="lname">{{lname}}</span>
                 </div>
             </div>
             <!-- email -->
@@ -33,7 +33,7 @@
                     Email address
                 </div>
                 <div class="col-sm-9">
-                    <span id="email"></span>
+                    <span id="email">{{email}}</span>
                 </div>
             </div>
             <!-- phone -->
@@ -42,7 +42,7 @@
                     Phone
                 </div>
                 <div class="col-sm-9">
-                    <span id="phone"></span>
+                    <span id="phone">{{phone}}</span>
                 </div>
             </div>
             <!-- package -->
@@ -51,7 +51,7 @@
                     Package
                 </div>
                 <div class="col-sm-9">
-                    <span id="packageselect"></span>
+                    <span id="packageselect">{{packageselect}}</span>
                 </div>
             </div>
             <!-- question -->
@@ -60,13 +60,13 @@
                     Your question
                 </div>
                 <div class="col-sm-9">
-                    <span id="question"></span>
+                    <span id="question">{{question}}</span>
                 </div>
             </div>
 
             <!-- home -->
             <div class="form-row">
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
             </div>
 
         </main>

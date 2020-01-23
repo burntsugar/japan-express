@@ -34,16 +34,13 @@
                                     <a class="nav-link" href="/">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/pages">About us</a>
+                                    <a class="nav-link" href="/pages/aboutus">About us</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/pages/contactus">Contact us</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/pages/planyourtrip">Plan your trip</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/pages/refinesearch">Refine search</a>
                                 </li>
                             </ul>
                             <form action={{search-form-action-endpoint}} method="GET" class="form-inline my-2 my-lg-0">

@@ -1,5 +1,6 @@
 <!-- content -->
         <main>
+        <span id="hidden-tour" class="hidden">{{tour}}</span>
             <!-- form -->
             <form id="form1" method="get" action="{{contact-form-action-endpoint}}">
                 <div class="row">
@@ -126,6 +127,8 @@
                 </div>
             </div>
         </main>
+
+    <script src="/scripts/prefillcity.js"></script>
 
     <!-- Local map script -->
     <script src="/scripts/homemap.js"></script>
