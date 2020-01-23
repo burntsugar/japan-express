@@ -1,3 +1,11 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:06:37 
+ * @Last Modified by: rach@rach.colley
+ * @Last Modified time: 2020-01-23 17:09:21
+ */
+
+
 import express from 'express';
 const pageRoutes = express.Router();
 import {pagesController} from '../controllers/pages-controller.js';

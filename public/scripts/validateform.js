@@ -1,3 +1,11 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:09:07 
+ * @Last Modified by:   rach@rach.colley 
+ * @Last Modified time: 2020-01-23 17:09:07 
+ */
+
+
 $(document).ready(function() {
   // Regular expression pattern attribution:
   // Dwayne Charrington

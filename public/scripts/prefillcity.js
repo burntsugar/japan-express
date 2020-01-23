@@ -1,3 +1,11 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:08:54 
+ * @Last Modified by:   rach@rach.colley 
+ * @Last Modified time: 2020-01-23 17:08:54 
+ */
+
+
 $(document).ready(function() {
   'use strict';
 

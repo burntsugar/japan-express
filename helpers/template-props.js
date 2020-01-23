@@ -1,3 +1,10 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:08:10 
+ * @Last Modified by:   rach@rach.colley 
+ * @Last Modified time: 2020-01-23 17:08:10 
+ */
+
 
 const templateProps = (() => {
   const tagHeaderNames = {

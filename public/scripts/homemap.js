@@ -1,3 +1,11 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:08:38 
+ * @Last Modified by:   rach@rach.colley 
+ * @Last Modified time: 2020-01-23 17:08:38 
+ */
+
+
 function myMap() {
   const myLatLng = {
     lat: -37.817049,

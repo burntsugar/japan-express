@@ -1,3 +1,10 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:07:59 
+ * @Last Modified by:   rach@rach.colley 
+ * @Last Modified time: 2020-01-23 17:07:59 
+ */
+
 
 import {UtilsCommonRach} from '../utils/utils-common-rach.js';
 import {templateProps} from './template-props.js';

@@ -1,3 +1,9 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:07:04 
+ * @Last Modified by:   rach@rach.colley 
+ * @Last Modified time: 2020-01-23 17:07:04 
+ */
 
 import {templateHelper} from '../helpers/template-helper.js';
 

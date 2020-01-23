@@ -1,3 +1,10 @@
+/*
+ * @Author: rach@rach.colley 
+ * @Date: 2020-01-23 17:07:49 
+ * @Last Modified by:   rach@rach.colley 
+ * @Last Modified time: 2020-01-23 17:07:49 
+ */
+
 
 import {templateProps} from './template-props.js';
 import {gmapsUrlHelper} from '../helpers/gmaps-url-helper.js';
