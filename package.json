@@ -11,7 +11,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "start": "node -r esm index.js",
+    "start": "node index.js",
     "test": "mocha --require esm --exit",
     "build:fabdist": "rm -rf dist/ && mkdir dist/ && cp -r controllers dist/ && cp -r helpers dist/ && cp -r public dist/ && cp -r routes dist/ && cp -r test dist/ && cp -r utils dist/ && cp -r views dist/ && cp index.js dist/ && cp keys.js dist/ && cp package.json dist/",
     "build:fab": "npm run build:fabdist && npm run fab:compile",
