@@ -8,7 +8,7 @@ describe('GET /', () => {
     myapp = app;
   });
 
-  it('responds with text/html; charset=UTF-8', (done) => {
+  it('responds with text/html; charset=utf-8', (done) => {
     console.log(done);
     Test(myapp)
       .get('/')
