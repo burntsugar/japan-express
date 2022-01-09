@@ -80,26 +80,8 @@ In progress...
 
 ## 👘  Environment
 
-* node 13.5
-* express 6.13.4
-
-### Dependencies
-
-````
-"dependencies": {
-    "esm": "^3.2.25",
-    "express": "^4.17.1",
-    "mocha": "^7.0.0",
-    "mustache": "^4.0.0",
-    "mustache-express": "^1.3.0"
-  },
-  "devDependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "eslint": "^6.8.0",
-    "eslint-config-google": "^0.14.0",
-    "supertest": "^4.0.2"
-  }
-  ````
+* node 13.5+
+* express 6.13.4+
 
 ### Template dependencies
 * jquery-3.3.1 (TODO: upgrade)
