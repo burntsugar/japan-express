@@ -10,6 +10,7 @@
     "JQuery"
   ],
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha"
   },
