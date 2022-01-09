@@ -1,9 +1,10 @@
 /*
  * @Author: rach@rach.colley 
  * @Date: 2020-01-23 17:09:56 
- * @Last Modified by:   rach@rach.colley 
- * @Last Modified time: 2020-01-23 17:09:56 
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2022-01-09 13:44:08
  */
+
 
 
 import express from 'express';
@@ -14,6 +15,9 @@ import mustache from 'mustache-express';
 import {envKeys} from './keys.js';
 import {pagesController} from './controllers/pages-controller.js';
 import {pageRoutes} from './routes/page-routes.js';
+
+import path from 'path';
+const __dirname = path.resolve();
 
 const app = express();
 app.use(express.static(__dirname+'/public'));
